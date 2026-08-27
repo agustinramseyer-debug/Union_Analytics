@@ -28,7 +28,7 @@ Un análisis integral (End-to-End) del rendimiento deportivo del Club Atlético 
 ## 📂 Estructura de este Repositorio
 
 *   `index.html`: Código fuente del reporte alojado en GitHub Pages.
-*    `Dashboard_Historial_Union`: Imagen del Dashboard.
+*    `Dashboard_Historial_Union.jpg`: Imagen del Dashboard.
 *    `Dashboard_Historial_Union.pbix`: Dashboard interactivo.
 *    `Codigo_union.sql`: Codigo de SQL
 *    `Reporte_Union.pdf`: PDF reporte del proyecto
