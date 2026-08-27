@@ -7,6 +7,8 @@ Un análisis integral (End-to-End) del rendimiento deportivo del Club Atlético 
 * **MySQL:** Limpieza, estandarización de entidades (rivales) y almacenamiento histórico (Data Warehouse).
 * **Power BI & DAX:** Modelado matemático y visualización interactiva de KPIs.
 
+<img src="dashboard.png" width="100%" alt="Dashboard_Historial_Union">
+
 **Proceso ETL (Extracción, Transformación y Carga):**
 1. **Extracción:** Se desarrolló un script en Python para raspar el historial de partidos de la web. Se implementaron expresiones regulares (Regex) para aislar resultados finales puros, filtrando la "basura" HTML y los resultados parciales de entretiempo.
 2. **Transformación:** Ingesta de datos crudos en MySQL. Se aplicaron sentencias `UPDATE` y filtros lógicos para normalizar los nombres de los equipos rivales (ej: unificar "CASL" y "San Lorenzo") y limpiar inconsistencias.
@@ -18,7 +20,7 @@ Un análisis integral (End-to-End) del rendimiento deportivo del Club Atlético 
 * **Evolución Cíclica:** El análisis histórico evidencia claramente los picos de rendimiento y los bajones deportivos, permitiendo cruzar los datos puros con los ciclos de los diferentes cuerpos técnicos.
 
 
-👉 [Ver el Reporte en Vivo][https://agustinramseyer-debug.github.io/Union-Analytics/]
+👉 [Ver el Reporte en Vivo][https://agustinramseyer-debug.github.io/Union_Analytics/]
 
 👉 **[Descargar Dashboard Interactivo][https://drive.google.com/file/d/1Z1_D2iPUocl7audX5zKBb8Qd5MolNSGL/view?usp=sharing]**
 
