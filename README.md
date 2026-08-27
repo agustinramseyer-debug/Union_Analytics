@@ -17,5 +17,16 @@ Un análisis integral (End-to-End) del rendimiento deportivo del Club Atlético 
 * **Radiografía de Rivales:** Identificación visual rápida de los rivales más hostiles (ej. Defensa y Justicia, Lanús) frente a los "puntos seguros", aislando el ruido estadístico de cruces esporádicos (filtro de > 3 partidos jugados).
 * **Evolución Cíclica:** El análisis histórico evidencia claramente los picos de rendimiento y los bajones deportivos, permitiendo cruzar los datos puros con los ciclos de los diferentes cuerpos técnicos.
 
-**Archivos del Proyecto:**
-En este repositorio se encuentra el script de extracción (Python), el código de transformación (SQL), el archivo original `.pbix` con el modelado de Power BI y un reporte escrito del proyecto.
+
+👉 [Ver el Reporte en Vivo][https://agustinramseyer-debug.github.io/Union-Analytics/]
+
+👉 **[Descargar Dashboard Interactivo][https://drive.google.com/file/d/1Z1_D2iPUocl7audX5zKBb8Qd5MolNSGL/view?usp=sharing]**
+
+
+## 📂 Estructura de este Repositorio
+
+*   `index.html`: Código fuente del reporte alojado en GitHub Pages.
+*    `Dashboard_Historial_Union`: Imagen del Dashboard.
+*    `Dashboard_Historial_Union.pbix`: Dashboard interactivo.
+*    `Codigo_union.sql`: Codigo de SQL
+*    `Reporte_Union.pdf`: PDF reporte del proyecto
