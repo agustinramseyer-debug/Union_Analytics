@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Analytics: Unión de Santa Fe | Portafolio</title>
+    <style>
+        :root {
+            --rojo-union: #c8102e;
+            --gris-oscuro: #333333;
+            --gris-claro: #f4f4f4;
+            --blanco: #ffffff;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--gris-oscuro);
+            background-color: var(--gris-claro);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: var(--rojo-union);
+            color: var(--blanco);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        .card {
+            background: var(--blanco);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        h2 {
+            color: var(--rojo-union);
+            border-bottom: 2px solid var(--gris-claro);
+            padding-bottom: 0.5rem;
+        }
+        .kpi-grid {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .kpi-box {
+            flex: 1;
+            background-color: var(--gris-claro);
+            padding: 1.5rem;
+            text-align: center;
+            border-radius: 8px;
+            border-top: 4px solid var(--rojo-union);
+        }
+        .kpi-box h3 {
+            margin: 0;
+            font-size: 2rem;
+            color: var(--gris-oscuro);
+        }
+        .kpi-box p {
+            margin: 0;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #666;
+        }
+        ul {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.8rem;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Club Analytics: Historial de Unión</h1>
+        <p>Análisis de rendimiento deportivo End-to-End (2015 - 2026)</p>
+    </header>
+
+    <div class="container">
+        <section class="card">
+            <h2>Resumen del Proyecto</h2>
+            <p>Este proyecto consiste en la creación de un flujo de datos (ETL) automatizado para medir la eficacia del Club Atlético Unión de Santa Fe. Desde la extracción de datos crudos en la web hasta la visualización en un panel de control ejecutivo, el objetivo es aportar métricas claras para la toma de decisiones deportivas.</p>
+            
+            <div class="kpi-grid">
+                <div class="kpi-box">
+                    <h3>428</h3>
+                    <p>Partidos Analizados</p>
+                </div>
+                <div class="kpi-box">
+                    <h3>43.2%</h3>
+                    <p>Efectividad Global</p>
+                </div>
+                <div class="kpi-box">
+                    <h3>-19</h3>
+                    <p>Diferencia de Gol</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <img src="Dashboard_Historial_Union.JPG" alt="Dashboard de Club Analytics en Power BI" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Arquitectura Técnica (Proceso ETL)</h2>
+            <ul>
+                <li><strong>Extracción (Python):</strong> Se desarrolló un script de web scraping utilizando <code>pandas</code> y <code>cloudscraper</code> para evadir bloqueos anti-bot. Se implementaron expresiones regulares para aislar los resultados finales e ignorar ruido HTML y resultados del entretiempo.</li>
+                <li><strong>Transformación (MySQL):</strong> Los datos extraídos fueron cargados en un Data Warehouse local. Se utilizaron comandos <code>UPDATE</code> y comodines <code>LIKE</code> para estandarizar inconsistencias en los nombres de los equipos rivales y preparar la tabla para el análisis.</li>
+                <li><strong>Visualización (Power BI):</strong> Se construyó un modelo semántico utilizando lenguaje <strong>DAX</strong> para calcular medidas dinámicas (Victorias, Derrotas, % Efectividad). El diseño incluyó <em>Tooltips</em> personalizados e interactividad total mediante segmentadores de torneos y oponentes.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Hallazgos Clave (Insights)</h2>
+            <ul>
+                <li><strong>La Fortaleza del 15 de Abril:</strong> Los datos exponen una drástica caída de rendimiento según la localía. El equipo logra un sólido <strong>51% de efectividad de local</strong> (con diferencia de gol positiva de +53), pero colapsa a un 35,23% jugando como visitante (-72 en goles).</li>
+                <li><strong>Radiografia de Rivales:</strong> Al aplicar un filtro de relevancia (mínimo 3 encuentros), el modelo detecta que equipos como Aldosivi y Sarmiento representan la mayor efectividad histórica a favor, mientras que Lanús y Defensa y Justicia se consolidan como las peores amenazas estadísticas.</li>
+                <li><strong>Dinámica de Clásicos:</strong> El cruce frente al clásico rival (Colón) destaca visualmente por la predominancia de los empates y un historial positivo a lo largo de la última década.</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>Desarrollado con Python, SQL y Power BI | Datos actualizados a Agosto 2026</p>
+    </footer>
+<section class="card">
+            <h2>Sobre el Analista</h2>
+            <p>¡Hola! Soy <strong>Agustin L. Ramseyer Pasquini</strong>, un apasionado por los datos y por Union. Me especializo en transformar datos complejos en historias visuales claras que impulsan la toma de decisiones. Este proyecto nació de mi interés por cruzar el análisis de datos con el deporte, demostrando mi capacidad para gestionar todo el ciclo de vida de la información: desde el web scraping y la limpieza con SQL, hasta el modelado matemático y la visualización ejecutiva.</p>
+            
+            <div style="margin-top: 1.5rem;">
+                <a href="[Enlace a tu LinkedIn]" target="_blank" style="display: inline-block; background-color: #0077b5; color: var(--blanco); padding: 0.6rem 1.2rem; text-decoration: none; border-radius: 4px; font-weight: bold; margin-right: 0.5rem;">🔗 LinkedIn</a>
+                
+                <a href="[https://github.com/agustinramseyer-debug]" target="_blank" style="display: inline-block; background-color: var(--gris-oscuro); color: var(--blanco); padding: 0.6rem 1.2rem; text-decoration: none; border-radius: 4px; font-weight: bold;">💻 GitHub</a>
+            </div>
+        </section>
+
+</body>
+</html>
