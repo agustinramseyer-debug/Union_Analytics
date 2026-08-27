@@ -7,7 +7,7 @@ Un análisis integral (End-to-End) del rendimiento deportivo del Club Atlético 
 * **MySQL:** Limpieza, estandarización de entidades (rivales) y almacenamiento histórico (Data Warehouse).
 * **Power BI & DAX:** Modelado matemático y visualización interactiva de KPIs.
 
-<img src="dashboard.png" width="100%" alt="Dashboard_Historial_Union.jpg">
+<img src="dashboard_historial_union.jpg" width="100%" alt="Dashboard Historial Union">
 
 **Proceso ETL (Extracción, Transformación y Carga):**
 1. **Extracción:** Se desarrolló un script en Python para raspar el historial de partidos de la web. Se implementaron expresiones regulares (Regex) para aislar resultados finales puros, filtrando la "basura" HTML y los resultados parciales de entretiempo.
